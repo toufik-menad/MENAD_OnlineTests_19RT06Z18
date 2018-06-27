@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package canada.montreal.MVC.dto;
+
+import java.util.UUID;
+
+/**
+ * @author MENAD
+ *
+ */
+public class Department {
+	
+
+	private UUID oid;
+    private String name;
+
+}

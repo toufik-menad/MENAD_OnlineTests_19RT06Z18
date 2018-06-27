@@ -1,0 +1,197 @@
+package canada.montreal.MVC.models;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.UUID;
+
+import javax.annotation.Resource;
+import javax.enterprise.inject.Model;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.transaction.UserTransaction;
+import javax.validation.ConstraintViolation;
+import javax.validation.Validator;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import canada.montreal.dao.DepartmentDAO;
+import canada.montreal.dao.EmployeeDAO;
+import canada.montreal.dto.Department;
+import canada.montreal.dto.Employee;
+import canada.montreal.entities.DepartmentEntity;
+import canada.montreal.entities.EmployeeEntity;
+
+
+@Model
+public class EmployeeModel {
+	
+	
+	private final Logger logger = LoggerFactory.getLogger(getClass());
+	private List<Employee>employees;
+	private EmployeeEntity employeeEntity;
+	//private UUID oid;
+	private Map<String, String> inputErrors = new HashMap<>();
+	
+    @PersistenceContext
+    private EntityManager entityManager;
+   
+    @Resource
+    private UserTransaction transaction;
+    
+    
+    @Inject DepartmentDAO departmentDao;
+    @Inject EmployeeDAO employeeDao;
+    @Inject private Validator validator;
+    
+	
+	public void handle(HttpServletRequest request) throws ServletException, IOException {
+		
+		logger.info("ENTER EmployeeModel.handle");
+		
+		String []resource = request.getRequestURI().substring(request.getContextPath().length()).split("\\;")[0].split("/");
+		String oidString = resource[2];
+		UUID oid = UUID.fromString(resource[2]);
+		
+//		String[]resource = request.getRequestURI().substring(request.getContextPath().length()).split("\\;")[0].split("/");
+//		if(resource.length==3) {
+//			oid = UUID.fromString(request.getRequestURI().substring(request.getContextPath().length()).split("\\;")[0].split("/")[2]);
+//			employeeEntity = employeeDao.findDTOByOid(oid);
+//			logger.info("OID: {}", oid);
+//		}else{
+//			logger.info("NEW EMPLOYEE");
+//			employeeEntity = new EmployeeEntity();
+//		}
+		
+		List<UUID>myOids = new ArrayList<>();
+		
+		employeeDao.findAllDTO().forEach(employee ->{
+			myOids.add(employee.getOid());
+		});
+		
+		if(myOids.contains(UUID.fromString(oid))) {
+			employeeEntity = employeeDao.findDTOByOid(oid);
+			logger.info("EXISTING EMPLOYEE");
+		}
+		
+			final String firstName = request.getParameter("firstName");
+			logger.info("FirstName: {}", firstName);
+			
+			final String lastName = request.getParameter("lastName");
+			logger.info("lastName: {}", lastName);
+			
+			
+			final String departmentName = request.getParameter("department");
+			logger.info("departmentName: {}", departmentName);
+			
+			
+			final Set<ConstraintViolation<EmployeeEntity>> issues = validator.validate(employeeEntity);
+			
+			
+			final String salaryTmp = request.getParameter("salary");
+			if(salaryTmp !=null) {
+			int salary  = Integer.parseInt(salaryTmp);
+			logger.info("salary: {}", salary);
+			if(salary<=500000) {
+			employeeEntity.setSalary(salary);
+			}else {
+			inputErrors.put("salaryMax", "Salary Must Be Less Than 500000");
+			}
+			}
+			
+			if( firstName!=null) {
+			employeeEntity.setFirstName(firstName);
+			}
+			if( lastName!=null) {
+			employeeEntity.setLastName(lastName);
+			}
+			
+			Department departmentDTO = new Department();
+			
+
+			if(departmentName !=null) {
+
+			logger.info("departmentName is not null");
+			departmentDTO = departmentDao.findDTOByName(departmentName);
+			
+			DepartmentEntity departmentEntity = new DepartmentEntity();
+			departmentEntity.setOid(departmentDTO.getOid());
+			departmentEntity.setName(departmentDTO.getName());
+			departmentEntity.setId(departmentDTO.getId());
+			
+			employeeEntity.setDepartment(departmentEntity);
+			
+			
+				try {
+					transaction.begin();
+					entityManager.persist(employeeEntity);
+	                transaction.commit();
+					
+				} catch (final Exception exception) {
+					issues.forEach(issue -> {
+		                final String attributesName = issue.getPropertyPath().toString();
+		                final String errorMsg = issue.getMessage();
+		                logger.info("Attribute Name: {}", attributesName);
+		                logger.info("errorMsg: {}", errorMsg);
+
+		                inputErrors.put(attributesName, errorMsg);
+		            });
+				}
+			
+			}
+		
+		
+		logger.info("EmployeeModel.EXIT handle");
+		
+	
+	}
+
+	/**
+	 * @return the employees
+	 */
+	public List<Employee> getEmployees() {
+		employees = employeeDao.findAllDTO();
+		return employees;
+	}
+	
+	
+	
+
+	/**
+	 * @return the oid
+	 */
+	public UUID getOid() {
+		return oid;
+	}
+
+	/**
+	 * @return the employee
+	 */
+	public EmployeeEntity getEmployee() {
+		
+		if(getOid() !=null) {
+			employeeEntity = employeeDao.findDTOByOid(getOid());
+	     }
+		return employeeEntity;
+	}
+
+	/**
+	 * @return the inputErrors
+	 */
+	public Map<String, String> getInputErrors() {
+		if(! inputErrors.isEmpty()) {
+		return inputErrors;
+	}else {
+		return null;
+	}
+
+	}
+}

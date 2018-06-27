@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package canada.montreal.MVC.entities;
+
+/**
+ * @author MENAD
+ *
+ */
+public class AbstractEntity {
+
+}

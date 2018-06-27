@@ -1,0 +1,71 @@
+/**
+ * 
+ */
+package canada.montreal.MVC.dto;
+
+import java.util.UUID;
+
+/**
+ * @author MENAD
+ *
+ */
+public class Employee{
+	
+
+    private UUID oid;
+    private String firstName;
+    private String lastName;
+    private int salary;
+    private Department department;
+	
+    
+    public Employee(UUID oid, String firstName, String lastName, int salary, Department department) {
+		super();
+		this.oid = oid;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.salary = salary;
+		this.department = department;
+	}
+
+
+	/**
+	 * @return the oid
+	 */
+	public UUID getOid() {
+		return oid;
+	}
+
+
+	/**
+	 * @return the firstName
+	 */
+	public String getFirstName() {
+		return firstName;
+	}
+
+
+	/**
+	 * @return the lastName
+	 */
+	public String getLastName() {
+		return lastName;
+	}
+
+
+	/**
+	 * @return the salary
+	 */
+	public int getSalary() {
+		return salary;
+	}
+
+
+	/**
+	 * @return the department
+	 */
+	public Department getDepartment() {
+		return department;
+	}
+
+}

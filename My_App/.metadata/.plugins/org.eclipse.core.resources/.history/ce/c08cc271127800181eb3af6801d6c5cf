@@ -1,0 +1,78 @@
+/**
+ * 
+ */
+package canada.montreal.dao;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import canada.montreal.dto.Department;
+import canada.montreal.entities.DepartmentEntity;
+
+/**
+ * @author MENAD
+ *
+ */
+
+@Stateless
+@LocalBean
+public class DepartmentDAO {
+	
+	
+	private final Logger logger = LoggerFactory.getLogger(getClass());
+	
+	@PersistenceContext
+    private EntityManager entityManager;
+	
+	
+	
+	/**
+	 * @param entityManager
+	 */
+	public DepartmentDAO() {
+	}
+	
+
+	/**
+	 * @param entityManager
+	 */
+	public DepartmentDAO(EntityManager entityManager) {
+		super();
+		this.entityManager = entityManager;
+	}
+
+
+
+	/**
+	 * @return the entityManager
+	 */
+	public EntityManager getEntityManager() {
+		return entityManager;
+	}
+	
+	
+	
+	public Department findDTOByName(String departmentname) {
+		logger.info("ENTER findEntityByName" );
+        final TypedQuery<Department> query = getEntityManager().createNamedQuery(DepartmentEntity.QUERY_DTO_FIND_BY_NAME,
+        		Department.class);
+        query.setParameter("name", departmentname);
+        logger.info("EXIT findEntityByName" );
+        return query.getSingleResult();
+    }
+	
+	
+	public java.util.List<Department> findAll() {
+        final TypedQuery<Department> query = getEntityManager().createNamedQuery(DepartmentEntity.QUERY_DTO_FIND_ALL,
+        		Department.class);
+        return query.getResultList();
+    }
+	
+
+}

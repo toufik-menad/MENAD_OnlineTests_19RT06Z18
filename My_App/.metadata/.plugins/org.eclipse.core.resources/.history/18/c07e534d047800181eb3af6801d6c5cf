@@ -1,0 +1,16 @@
+package canada.montreal.entities;
+
+import java.util.UUID;
+import javax.annotation.Generated;
+import javax.persistence.metamodel.SingularAttribute;
+import javax.persistence.metamodel.StaticMetamodel;
+
+@Generated(value="Dali", date="2018-06-24T17:14:06.088-0600")
+@StaticMetamodel(EmployeeEntity.class)
+public class EmployeeEntity_ extends AbstractEntity_ {
+	public static volatile SingularAttribute<EmployeeEntity, String> firstName;
+	public static volatile SingularAttribute<EmployeeEntity, String> lastName;
+	public static volatile SingularAttribute<EmployeeEntity, Integer> salary;
+	public static volatile SingularAttribute<EmployeeEntity, UUID> departmentOid;
+	public static volatile SingularAttribute<EmployeeEntity, DepartmentEntity> cart;
+}

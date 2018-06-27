@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/annotation/api/main/jboss-annotations-api_1.2_spec-1.0.0.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/mail/api/main/javax.mail-1.5.6.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/servlet/jstl/api/main/taglibs-standard-compat-1.2.6-RC1.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-compat-1.2.6-RC1.jar/meta-inf/c-1_0.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-compat-1.2.6-RC1.jar/meta-inf/fmt-1_0.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-compat-1.2.6-RC1.jar/meta-inf/sql-1_0.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-compat-1.2.6-RC1.jar/meta-inf/x-1_0.tld" project="myapp"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-jaxrs/main/resteasy-jaxrs-3.0.24.Final.jar"/>
+  <path value="/Users/MENAD/.m2/repository/javax/el/javax.el-api/3.0.1-b04/javax.el-api-3.0.1-b04.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/org/jboss/dmr/main/jboss-dmr-1.4.1.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/xml/bind/api/main/jboss-jaxb-api_2.2_spec-1.0.4.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/enterprise/concurrent/api/main/jboss-concurrency-api_1.0_spec-1.0.0.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/org/picketbox/main/picketbox-commons-1.0.0.final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/My_App/libraries/EclipseLink 2.5.2/eclipselink/jlib/moxy/com.sun.xml.bind_2.2.0.v201004141950.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/xml/ws/api/main/jboss-jaxws-api_2.2_spec-2.0.4.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/servlet/jstl/api/main/taglibs-standard-impl-1.2.6-RC1.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.6-RC1.jar/meta-inf/c-1_0-rt.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.6-RC1.jar/meta-inf/c-1_1.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.6-RC1.jar/meta-inf/c.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.6-RC1.jar/meta-inf/fmt-1_0-rt.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.6-RC1.jar/meta-inf/fmt.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.6-RC1.jar/meta-inf/fn.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.6-RC1.jar/meta-inf/permittedtaglibs.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.6-RC1.jar/meta-inf/scriptfree.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.6-RC1.jar/meta-inf/sql-1_0-rt.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.6-RC1.jar/meta-inf/sql.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.6-RC1.jar/meta-inf/x-1_0-rt.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.6-RC1.jar/meta-inf/x.tld" project="myapp"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/transaction/api/main/jboss-transaction-api_1.2_spec-1.0.1.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/My_App/libraries/EclipseLink 2.5.2/eclipselink/jlib/jpa/org.eclipse.persistence.jpars_2.5.2.v20140319-9ad6abd.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/servlet/jsp/api/main/jboss-jsp-api_2.3_spec-1.0.1.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-jaxrs/main/resteasy-client-3.0.24.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/My_App/libraries/EclipseLink 2.5.2/eclipselink/jlib/moxy/javax.activation_1.1.0.v201108011116.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/My_App/libraries/EclipseLink 2.5.2/eclipselink/jlib/jpa/org.eclipse.persistence.jpa.modelgen_2.5.2.v20140319-9ad6abd.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/My_App/libraries/EclipseLink 2.5.2/eclipselink/jlib/moxy/com.sun.tools.xjc_2.2.0.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/My_App/libraries/EclipseLink 2.5.2/eclipselink/jlib/moxy/javax.mail_1.4.0.v201005080615.jar"/>
+  <path value="/Users/MENAD/.m2/repository/javax/javaee-web-api/7.0/javaee-web-api-7.0.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/org/jboss/as/controller-client/main/wildfly-controller-client-3.0.8.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/My_App/libraries/EclipseLink 2.5.2/eclipselink/jlib/moxy/javax.xml.stream_1.0.1.v201004272200.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/faces/api/main/jboss-jsf-api_2.2_spec-2.2.13.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/interceptor/api/main/jboss-interceptors-api_1.2_spec-1.0.0.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/xml/soap/api/main/jboss-saaj-api_1.3_spec-1.0.4.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/security/auth/message/api/main/jboss-jaspi-api_1.1_spec-1.0.0.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/org/picketbox/main/picketbox-5.0.2.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-multipart-provider/main/resteasy-multipart-provider-3.0.24.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/My_App/libraries/EclipseLink 2.5.2/eclipselink/jlib/eclipselink.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/My_App/libraries/EclipseLink 2.5.2/eclipselink/jlib/moxy/javax.xml.bind_2.2.0.v201105210648.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/activation/api/main/activation-1.1.1.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/el/api/main/jboss-el-api_3.0_spec-1.0.9.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-jaxb-provider/main/resteasy-jaxb-provider-3.0.24.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/ws/rs/api/main/jboss-jaxrs-api_2.0_spec-1.0.0.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-private/main/wildfly-elytron-1.1.6.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/My_App/libraries/EclipseLink 2.5.2/eclipselink/jlib/jpa/javax.persistence_2.1.0.v201304241213.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/wsdl4j/api/main/wsdl4j-1.6.3.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/org/hibernate/validator/main/hibernate-validator-5.3.5.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/jms/api/main/jboss-jms-api_2.0_spec-1.0.1.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/xml/rpc/api/main/jboss-jaxrpc-api_1.1_spec-1.0.1.Final.jar"/>
+  <path value="/Users/MENAD/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/ejb/api/main/jboss-ejb-api_3.2_spec-1.0.0.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/resource/api/main/jboss-connector-api_1.7_spec-1.0.0.Final.jar"/>
+  <path value="/Users/MENAD/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c-1_0-rt.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c-1_0.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt-1_0-rt.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt-1_0.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fn.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/permittedtaglibs.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/scriptfree.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql-1_0-rt.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql-1_0.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x-1_0-rt.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x-1_0.tld" project="myapp"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x.tld" project="myapp"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/org/jboss/ejb3/main/jboss-ejb3-ext-api-2.2.0.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/servlet/jstl/api/main/taglibs-standard-spec-1.2.6-RC1.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/validation/api/main/validation-api-1.1.0.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/jws/api/main/jsr181-api-1.0-MR1.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/security/jacc/api/main/jboss-jacc-api_1.5_spec-1.0.1.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/enterprise/api/main/cdi-api-1.2.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/servlet/api/main/jboss-servlet-api_3.1_spec-1.0.0.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/org/picketbox/main/picketbox-infinispan-5.0.2.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/org/jboss/logging/main/jboss-logging-3.3.1.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/org/wildfly/common/main/wildfly-common-1.2.0.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/batch/api/main/jboss-batch-api_1.0_spec-1.0.0.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/inject/api/main/javax.inject-1.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/persistence/api/main/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/management/j2ee/api/main/jboss-j2eemgmt-api_1.1_spec-1.0.1.Final.jar"/>
+  <path value="/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/wildfly-11.0.0.Final/modules/system/layers/base/javax/websocket/api/main/jboss-websocket-api_1.1_spec-1.1.1.Final.jar"/>
+ </paths>
+ <validation>
+  <core validator-id="jsf-verification"/>
+  <core validator-id="batch-verification"/>
+  <core validator-id="jboss.jsf.core"/>
+  <el>
+   <linked-el length="34" name="%0" offset="1888" path="%1"/>
+   <linked-el length="60" name="%2" offset="1293" path="%1"/>
+   <linked-el length="50" name="%2" offset="963" path="%3"/>
+   <linked-el length="38" name="%2" offset="841" path="%1"/>
+   <linked-el length="38" name="%2" offset="843" path="%3"/>
+   <linked-el length="38" name="%2" offset="1506" path="%1"/>
+   <linked-el length="50" name="%2" offset="961" path="%1"/>
+   <linked-el length="28" name="%2" offset="1195" path="%4"/>
+   <linked-el length="34" name="%2" offset="1888" path="%1"/>
+   <linked-el length="58" name="%2" offset="1236" path="%3"/>
+   <linked-el length="50" name="%2" offset="691" path="%3"/>
+   <linked-el length="46" name="%2" offset="1397" path="%3"/>
+   <linked-el length="36" name="%2" offset="2074" path="%1"/>
+   <linked-el length="38" name="%2" offset="1113" path="%1"/>
+   <linked-el length="38" name="%2" offset="1115" path="%3"/>
+   <linked-el length="50" name="%2" offset="689" path="%1"/>
+   <linked-el length="37" name="%2" offset="1711" path="%1"/>
+   <linked-el length="50" name="%5" offset="365" path="%1"/>
+   <linked-el length="58" name="%5" offset="445" path="%1"/>
+   <linked-el length="50" name="%5" offset="365" path="%3"/>
+   <linked-el length="58" name="%5" offset="445" path="%3"/>
+   <linked-el length="50" name="%5" offset="367" path="%6"/>
+   <linked-el length="58" name="%5" offset="447" path="%6"/>
+   <linked-el length="50" name="%5" offset="365" path="%4"/>
+   <linked-el length="58" name="%5" offset="445" path="%4"/>
+   <linked-el length="46" name="%7" offset="1296" path="%4"/>
+   <linked-el length="21" name="%7" offset="1343" path="%4"/>
+   <linked-el length="18" name="%7" offset="1459" path="%4"/>
+   <linked-el length="20" name="%7" offset="1401" path="%4"/>
+   <linked-el length="50" name="%8" offset="365" path="%1"/>
+   <linked-el length="58" name="%8" offset="445" path="%1"/>
+   <linked-el length="50" name="%8" offset="365" path="%3"/>
+   <linked-el length="58" name="%8" offset="445" path="%3"/>
+   <linked-el length="50" name="%8" offset="367" path="%6"/>
+   <linked-el length="58" name="%8" offset="447" path="%6"/>
+   <linked-el length="50" name="%8" offset="365" path="%4"/>
+   <linked-el length="58" name="%8" offset="445" path="%4"/>
+   <linked-el length="21" name="%9" offset="1343" path="%4"/>
+   <linked-el length="31" name="%10" offset="940" path="%6"/>
+   <linked-el length="43" name="%10" offset="795" path="%6"/>
+   <linked-el length="50" name="%11" offset="365" path="%1"/>
+   <linked-el length="58" name="%11" offset="445" path="%1"/>
+   <linked-el length="50" name="%11" offset="365" path="%3"/>
+   <linked-el length="58" name="%11" offset="445" path="%3"/>
+   <linked-el length="50" name="%11" offset="367" path="%6"/>
+   <linked-el length="58" name="%11" offset="447" path="%6"/>
+   <linked-el length="50" name="%11" offset="365" path="%4"/>
+   <linked-el length="58" name="%11" offset="445" path="%4"/>
+   <linked-el length="16" name="%12" offset="1976" path="%6"/>
+   <linked-el length="18" name="%12" offset="2439" path="%1"/>
+   <linked-el length="18" name="%12" offset="2382" path="%3"/>
+   <linked-el length="18" name="%12" offset="1920" path="%6"/>
+   <linked-el length="28" name="%13" offset="1195" path="%4"/>
+   <linked-el length="46" name="%14" offset="1296" path="%4"/>
+   <linked-el length="60" name="%15" offset="1293" path="%1"/>
+   <linked-el length="60" name="%16" offset="1293" path="%1"/>
+   <linked-el length="38" name="%16" offset="1506" path="%1"/>
+   <linked-el length="34" name="%16" offset="1888" path="%1"/>
+   <linked-el length="37" name="%16" offset="1711" path="%1"/>
+   <linked-el length="18" name="%17" offset="1459" path="%4"/>
+   <linked-el length="18" name="%18" offset="2439" path="%1"/>
+   <linked-el length="18" name="%18" offset="2382" path="%3"/>
+   <linked-el length="18" name="%18" offset="1920" path="%6"/>
+   <linked-el length="38" name="%19" offset="1506" path="%1"/>
+   <linked-el length="58" name="%20" offset="1236" path="%3"/>
+   <linked-el length="50" name="%20" offset="691" path="%3"/>
+   <linked-el length="50" name="%20" offset="963" path="%3"/>
+   <linked-el length="46" name="%20" offset="1397" path="%3"/>
+   <linked-el length="38" name="%20" offset="841" path="%1"/>
+   <linked-el length="38" name="%20" offset="1113" path="%1"/>
+   <linked-el length="38" name="%20" offset="843" path="%3"/>
+   <linked-el length="38" name="%20" offset="1115" path="%3"/>
+   <linked-el length="50" name="%20" offset="689" path="%1"/>
+   <linked-el length="50" name="%20" offset="961" path="%1"/>
+   <linked-el length="31" name="%21" offset="940" path="%6"/>
+   <linked-el length="43" name="%21" offset="795" path="%6"/>
+   <linked-el length="32" name="%21" offset="2311" path="%3"/>
+   <linked-el length="32" name="%21" offset="1824" path="%6"/>
+   <linked-el length="32" name="%21" offset="2368" path="%1"/>
+   <linked-el length="37" name="%22" offset="1711" path="%1"/>
+   <linked-el length="36" name="%23" offset="2074" path="%1"/>
+   <linked-el length="20" name="%24" offset="1401" path="%4"/>
+   <linked-el length="16" name="%25" offset="1976" path="%6"/>
+   <linked-el length="32" name="%26" offset="2311" path="%3"/>
+   <linked-el length="32" name="%26" offset="1824" path="%6"/>
+   <linked-el length="32" name="%26" offset="2368" path="%1"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="employeeModel.employee.salary" value="%0"/>
+  <alias path="employeeModel" value="%2"/>
+  <alias path="pageContext.request" value="%5"/>
+  <alias path="employee" value="%7"/>
+  <alias path="/myapp/src/main/webapp/WEB-INF/jsp/departments.jsp" value="%6"/>
+  <alias path="pageContext" value="%8"/>
+  <alias path="employee.firstName" value="%9"/>
+  <alias path="departmentModel.messageError" value="%10"/>
+  <alias path="pageContext.request.contextPath" value="%11"/>
+  <alias path="department" value="%12"/>
+  <alias path="employeeModel.employees" value="%13"/>
+  <alias path="/myapp/src/main/webapp/WEB-INF/jsp/employees.jsp" value="%4"/>
+  <alias path="employee.oid" value="%14"/>
+  <alias path="/myapp/src/main/webapp/WEB-INF/jsp/Registeremployees.jsp" value="%3"/>
+  <alias path="employeeModel.employee.oid" value="%15"/>
+  <alias path="employeeModel.employee" value="%16"/>
+  <alias path="employee.salary" value="%17"/>
+  <alias path="department.name" value="%18"/>
+  <alias path="/myapp/src/main/webapp/WEB-INF/jsp/Updateemployees.jsp" value="%1"/>
+  <alias path="employeeModel.employee.firstName" value="%19"/>
+  <alias path="employeeModel.inputErrors" value="%20"/>
+  <alias path="departmentModel" value="%21"/>
+  <alias path="employeeModel.employee.lastName" value="%22"/>
+  <alias path="employeeModel.myDepartmentName" value="%23"/>
+  <alias path="employee.lastName" value="%24"/>
+  <alias path="department.id" value="%25"/>
+  <alias path="departmentModel.departments" value="%26"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://java.sun.com/jsp/jstl/core">
+   <prefix>c</prefix>
+  </uri>
+ </uris>
+</kb-project>

@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package canada.montreal.MVC.dto;
+
+/**
+ * @author MENAD
+ *
+ */
+public class Employee {
+	
+
+    private Long id;
+    
+    private String firstName;
+    
+    private String lastName;
+    private int salary;
+    
+    private Department department;
+
+}

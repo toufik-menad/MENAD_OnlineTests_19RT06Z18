@@ -1,0 +1,5 @@
+package canada.montreal.MVC.models;
+
+public class EmployeeModel {
+
+}

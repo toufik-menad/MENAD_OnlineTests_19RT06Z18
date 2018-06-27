@@ -1,0 +1,10 @@
+INDEX VERSION 1.4+/Users/MENAD/Desktop/Interview Job Description/Acquisio-Git/My_App/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3357891508.index
+1384965215.index
+3666035054.index
+3308203663.index
+881669472.index
+109241207.index
+1394107707.index
+840409545.index
+840409545.index

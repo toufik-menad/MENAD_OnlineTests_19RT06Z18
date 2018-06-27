@@ -1,0 +1,71 @@
+/**
+ * 
+ */
+package canada.montreal.dao;
+
+import java.util.UUID;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import canada.montreal.dto.Department;
+import canada.montreal.entities.DepartmentEntity;
+import canada.montreal.entities.EmployeeEntity;
+
+/**
+ * @author MENAD
+ *
+ */
+
+@Stateless
+@LocalBean
+public class EmployeeDAO {
+	
+	rivate final Logger logger = LoggerFactory.getLogger(getClass());
+	
+	@PersistenceContext
+    private EntityManager entityManager;
+	
+	/**
+	 * @param entityManager
+	 */
+	public EmployeeDAO() {
+	}
+	
+
+	/**
+	 * @param entityManager
+	 */
+	public EmployeeDAO(EntityManager entityManager) {
+		super();
+		this.entityManager = entityManager;
+	}
+
+
+
+	/**
+	 * @return the entityManager
+	 */
+	public EntityManager getEntityManager() {
+		return entityManager;
+	}
+	
+	
+	public EmployeeEntity findEntityByOid(UUID oid) {
+		
+		logger.info("ENTER findEntityByOid" );
+        final TypedQuery<Department> query = getEntityManager().createNamedQuery(DepartmentEntity.QUERY_DTO_FIND_BY_NAME,
+        		Department.class);
+        query.setParameter("name", departmentname);
+        logger.info("EXIT findEntityByOid" );
+        return query.getSingleResult();
+	}
+	
+
+}

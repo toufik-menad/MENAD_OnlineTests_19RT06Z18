@@ -1,0 +1,12 @@
+package canada.montreal.MVC.entities;
+
+import java.util.UUID;
+import javax.annotation.Generated;
+import javax.persistence.metamodel.SingularAttribute;
+import javax.persistence.metamodel.StaticMetamodel;
+
+@Generated(value="Dali", date="2018-06-21T13:29:34.403-0600")
+@StaticMetamodel(AbstractEntity.class)
+public class AbstractEntity_ {
+	public static volatile SingularAttribute<AbstractEntity, UUID> oid;
+}

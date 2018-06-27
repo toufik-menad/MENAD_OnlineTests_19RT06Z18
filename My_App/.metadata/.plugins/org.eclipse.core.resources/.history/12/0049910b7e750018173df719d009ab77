@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package canada.montreal.MVC.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+import canada.montreal.MVC.dto.Department;
+
+/**
+ * @author MENAD
+ *
+ */
+@Entity(name = "Employee")
+public class EmployeeEntity extends AbstractEntity{
+	
+	
+	@Column(name="first_Name", nullable=false, insertable= true, length = 128)
+    private String firstName;
+	
+	@Column(name="last_Name", nullable=false, insertable= true, length = 128)
+	private String lastName;
+	
+	@Column(name="salary", nullable=false, insertable= true, length = 128)
+	private int salary;
+	
+	@Column(name="department", nullable=false, insertable= true, length = 128)
+	private Department department;
+	
+
+}

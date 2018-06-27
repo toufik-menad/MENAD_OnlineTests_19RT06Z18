@@ -1,0 +1,70 @@
+package canada.montreal.MVC.models;
+
+import java.io.IOException;
+import java.util.UUID;
+
+import javax.enterprise.inject.Model;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import canada.montreal.dao.EmployeeDAO;
+import canada.montreal.dto.Department;
+import canada.montreal.dto.Employee;
+
+
+@Model
+public class EmployeeModel {
+	
+	
+	private final Logger logger = LoggerFactory.getLogger(getClass());
+	private Employee employee;
+	
+	
+	
+	@PersistenceContext
+	private EntityManager entityManager;
+	
+	@Inject EmployeeDAO employeeDAO;
+	
+	
+	public void handle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		logger.info("ENTER handle");
+		
+		final String firstName = request.getAttribute("firstName")
+		logger.info("FirstName: {}", firstName);
+		
+		final String lastName = request.getParameter("lastName");
+		logger.info("lastName: {}", lastName);
+		
+		final String salary = request.getParameter("salary");
+		logger.info("salary: {}", salary);
+		
+		final String department = request.getParameter("department");
+		logger.info("department: {}", department);
+		
+		employee.setFirstName(firstName);
+		employee.setLastName(lastName);
+		employee.setSalary(Integer.parseInt(salary));
+		employee.setDepartment(new Department(UUID.randomUUID(),department));
+		
+		
+		try {
+		employeeDAO.getEntityManager().persist(employee);
+	   }catch(final Exception ex) {
+		ex.printStackTrace();
+	   }
+		logger.info("EXIT handle");
+		
+		
+	
+	}
+
+}

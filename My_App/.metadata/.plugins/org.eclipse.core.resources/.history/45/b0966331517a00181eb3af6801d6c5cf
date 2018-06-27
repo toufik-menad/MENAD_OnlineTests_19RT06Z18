@@ -1,0 +1,60 @@
+package question02;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * QUESTION 2: TreeNode
+ * Using the tree structure define at
+ * http://en.wikipedia.org/wiki/File:Binary_tree.svg,
+ * add the code necessary to optain the following output.
+ * ..2
+ * ....7
+ * ......2
+ * ......6
+ * ........5
+ * ........11
+ * ....5
+ * ......9
+ * ........4
+ *
+ * IMPORTANT: Add all missing javadoc that you think is necessary.
+ */
+public class TreeNavigation {
+
+    public static void main(String[] args) {
+        TreeNavigation main = new TreeNavigation();
+        main.treeNode();
+    }
+
+    private void treeNode() {
+        Node n1 = new Node("6", new Node("5"), new Node("11"));
+        Node n2 = new Node("7", new Node("2"), n1);
+        Node n3 = new Node("9", new Node("4"));
+        Node n4 = new Node("5", null, n3);
+        Node n = new Node("2", n2, n4);
+        // TODO: Implement code here
+        
+        List<Node>myList  = new ArrayList<>();
+        myList.add(n1);
+        myList.add(n2);
+        myList.add(n3);
+        myList.add(n4);
+        myList.add(n);
+        
+        for(Node node: myList) {
+            
+            System.out.println("name" + node.name);
+            System.out.println("children" + node.children.length);
+            
+            for(int s =0;s<node.children.length;s++) {
+                System.out.println(node.children.length);
+            }
+            
+        }
+        
+        
+        
+
+    }
+}

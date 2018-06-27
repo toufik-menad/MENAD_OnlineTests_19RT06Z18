@@ -1,0 +1,56 @@
+package canada.montreal.MVC.models;
+
+import java.io.IOException;
+
+import javax.enterprise.inject.Model;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import canada.montreal.dto.Employee;
+
+
+@Model
+public class EmployeeModel {
+	
+	
+	private final Logger logger = LoggerFactory.getLogger(getClass());
+	private Employee employee;
+	
+	
+	
+	@PersistenceContext
+	private EntityManager entityManager;
+	
+	
+	public void handle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		logger.info("ENTER handle");
+		
+		final String firstName = request.getParameter("firstName");
+		logger.info("FirstName: {}", firstName);
+		
+		final String lastName = request.getParameter("lastName");
+		logger.info("lastName: {}", lastName);
+		
+		final String salary = request.getParameter("salary");
+		logger.info("salary: {}", salary);
+		
+		final String department = request.getParameter("department");
+		logger.info("department: {}", department);
+		
+		
+		
+		
+		logger.info("EXIT handle");
+		
+		
+	
+	}
+
+}

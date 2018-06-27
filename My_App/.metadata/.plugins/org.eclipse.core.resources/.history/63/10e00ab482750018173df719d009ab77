@@ -1,0 +1,41 @@
+/**
+ * 
+ */
+package canada.montreal.MVC.dto;
+
+import java.io.Serializable;
+import java.util.UUID;
+
+/**
+ * @author MENAD
+ *
+ */
+public class Department implements Serializable{
+	
+
+	private UUID oid;
+    private String name;
+	/**
+	 * @param oid
+	 * @param name
+	 */
+	public Department(UUID oid, String name) {
+		super();
+		this.oid = oid;
+		this.name = name;
+	}
+	/**
+	 * @return the oid
+	 */
+	public UUID getOid() {
+		return oid;
+	}
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+    
+
+}

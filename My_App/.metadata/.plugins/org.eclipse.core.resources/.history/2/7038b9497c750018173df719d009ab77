@@ -1,0 +1,26 @@
+/**
+ * 
+ */
+package canada.montreal.MVC.entities;
+
+import java.util.UUID;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+/**
+ * @author MENAD
+ *
+ */
+@Entity(name = "Department")
+public class DepartmentEntity extends AbstractEntity{
+	
+		
+	@Column(name="first_Name", nullable=false, insertable= true, length = 128)
+	private String name;
+	
+	
+	
+
+}

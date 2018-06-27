@@ -1,0 +1,83 @@
+/**
+ * 
+ */
+package canada.montreal.entities;
+
+import java.util.UUID;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+/**
+ * @author MENAD
+ *
+ */
+@Entity(name = "Employee")
+@Table(name="employee")
+public class EmployeeEntity extends AbstractEntity{
+	
+	
+	@Column(name="first_Name", nullable=false, insertable= true, length = 128)
+    private String firstName;
+	
+	@Column(name="last_Name", nullable=false, insertable= true, length = 128)
+	private String lastName;
+	
+	@Column(name="salary", nullable=false, insertable= true, length = 128)
+	private int salary;
+	
+//	@Column(name="department", nullable=false, insertable= true, length = 128)
+//	private Department departmentOfEmployee;
+	
+//	@ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "department_name")
+//	private DepartmentEntity departmentOfEmployee;
+	
+	@Column(name="department_oid", nullable=false, insertable= true, length = 128)
+	UUID departmentOid;
+
+	/**
+	 * @return the firstName
+	 */
+	public String getFirstName() {
+		return firstName;
+	}
+
+	/**
+	 * @param firstName the firstName to set
+	 */
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	/**
+	 * @return the lastName
+	 */
+	public String getLastName() {
+		return lastName;
+	}
+
+	/**
+	 * @param lastName the lastName to set
+	 */
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	/**
+	 * @return the salary
+	 */
+	public int getSalary() {
+		return salary;
+	}
+
+	/**
+	 * @param salary the salary to set
+	 */
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}	
+	
+
+}

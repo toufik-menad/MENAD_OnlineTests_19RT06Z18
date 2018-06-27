@@ -1,0 +1,14 @@
+package canada.montreal.MVC.entities;
+
+import javax.annotation.Generated;
+import javax.persistence.metamodel.ListAttribute;
+import javax.persistence.metamodel.SingularAttribute;
+import javax.persistence.metamodel.StaticMetamodel;
+
+@Generated(value="Dali", date="2018-06-21T12:30:11.151-0600")
+@StaticMetamodel(DepartmentEntity.class)
+public class DepartmentEntity_ extends AbstractEntity_ {
+	public static volatile SingularAttribute<DepartmentEntity, EmployeeEntity> employee;
+	public static volatile SingularAttribute<DepartmentEntity, String> name;
+	public static volatile ListAttribute<DepartmentEntity, EmployeeEntity> employeesOfDepartment;
+}

@@ -1,0 +1,85 @@
+/**
+ * 
+ */
+package canada.montreal.entities;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+/**
+ * @author MENAD
+ *
+ */
+@Entity(name = "Department")
+@Table(name="department")
+@NamedQueries({
+
+    @NamedQuery(name = DepartmentEntity.QUERY_FIND_ENTITY_BY_NAME, query = "SELECT d FROM Department d WHERE d.name = :name"),
+    @NamedQuery(name = DepartmentEntity.QUERY_FIND_ENTITY_ALL, query = "SELECT d FROM Department d"), 
+    @NamedQuery(name = DepartmentEntity.QUERY_DTO_FIND_BY_NAME, query = "SELECT " + DepartmentEntity.CONSTRUCT_PARAM
+    + " FROM Department d WHERE d.name = :name"),
+    })
+
+public class DepartmentEntity extends AbstractEntity{
+	
+	
+	public static final String QUERY_FIND_ENTITY_BY_NAME = "DepartmentEntity.findEntityByName";
+    public static final String QUERY_FIND_ENTITY_ALL = "DepartmentEntity.findAll";
+    public static final String QUERY_DTO_FIND_BY_NAME = "DepartmentEntity.findByName";
+    protected static final String CONSTRUCT_PARAM = "new canada.montreal.dto.Department( " + "   d.oid," + "   d.name,"
+            + ")";
+	
+	@Column(name="department_Name", nullable=false, insertable= true, length = 128)
+	private String name;
+	
+	@Column(name="department_id", nullable=false, insertable= true, length = 128)
+	private Long id;
+	
+	
+	@OneToMany(mappedBy = "department", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<EmployeeEntity> employeelist;
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public Long getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the employeelist
+	 */
+	public List<EmployeeEntity> getEmployeelist() {
+		return employeelist;
+	}
+	
+}

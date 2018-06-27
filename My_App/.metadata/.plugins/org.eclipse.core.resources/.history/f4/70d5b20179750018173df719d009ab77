@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package canada.montreal.MVC.dto;
+
+/**
+ * @author MENAD
+ *
+ */
+public class Department {
+	
+
+    private Long id;
+    private String name;
+
+}

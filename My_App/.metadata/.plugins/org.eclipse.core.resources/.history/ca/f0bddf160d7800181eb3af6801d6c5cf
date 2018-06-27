@@ -1,0 +1,60 @@
+/**
+ * 
+ */
+package canada.montreal.dao;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+
+import canada.montreal.entities.DepartmentEntity;
+
+/**
+ * @author MENAD
+ *
+ */
+
+@Stateless
+@LocalBean
+public class DepartmentDAO {
+	
+	@PersistenceContext
+    private EntityManager entityManager;
+	
+	/**
+	 * @param entityManager
+	 */
+	public DepartmentDAO() {
+	}
+	
+
+	/**
+	 * @param entityManager
+	 */
+	public DepartmentDAO(EntityManager entityManager) {
+		super();
+		this.entityManager = entityManager;
+	}
+
+
+
+	/**
+	 * @return the entityManager
+	 */
+	public EntityManager getEntityManager() {
+		return entityManager;
+	}
+	
+	
+	
+	public DepartmentEntity findEntityByName(String departmentname) {
+        final TypedQuery<DepartmentEntity> query = getEntityManager().createNamedQuery(DepartmentEntity.QUERY_FIND_ENTITY_BY_NAME,
+        		DepartmentEntity.class);
+        query.setParameter("name", departmentname);
+        return query.getSingleResult();
+    }
+	
+
+}

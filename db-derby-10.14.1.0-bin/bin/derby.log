@@ -1,0 +1,14 @@
+Wed Jun 27 15:43:04 MDT 2018 : Apache Derby Network Server - 10.14.1.0 - (1808820) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+Wed Jun 27 15:43:51 MDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-0164-4333-2b4a-00003127aeca 
+on database directory /Users/MENAD/Desktop/Acquisio-Git/db-derby-10.14.1.0-bin/bin/mydatasource with class loader sun.misc.Launcher$AppClassLoader@60e53b93 
+Loaded from file:/Users/MENAD/Desktop/Acquisio-Git/db-derby-10.14.1.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_144-b01
+user.dir=/Users/MENAD/Desktop/Acquisio-Git/db-derby-10.14.1.0-bin/bin
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.13.5
+derby.system.home=/Users/MENAD/Desktop/Acquisio-Git/db-derby-10.14.1.0-bin/bin
+Database Class Loader started - derby.database.classpath=''

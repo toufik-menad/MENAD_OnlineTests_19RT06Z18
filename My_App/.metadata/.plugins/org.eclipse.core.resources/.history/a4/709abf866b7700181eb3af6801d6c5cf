@@ -1,0 +1,21 @@
+package canada.montreal.MVC.models;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class EmployeeModel {
+	
+	
+	public void handle(HttpServletRequest request, HttpServletResponse response) {
+		
+		final String firstName = request.getParameter("firstName");
+		final String lastName = request.getParameter("lastName");
+		final String salary = request.getParameter("salary");
+		final String department = request.getParameter("department");
+		
+		
+		
+	
+	}
+
+}

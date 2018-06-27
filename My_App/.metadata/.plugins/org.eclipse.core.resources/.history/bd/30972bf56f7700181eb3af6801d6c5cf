@@ -1,0 +1,26 @@
+/**
+ * 
+ */
+package canada.montreal.dao;
+
+import javax.persistence.EntityManager;
+
+/**
+ * @author MENAD
+ *
+ */
+public class EmployeeDAO {
+	
+	private final EntityManager entityManager;
+
+	/**
+	 * @param entityManager
+	 */
+	public EmployeeDAO(EntityManager entityManager) {
+		super();
+		this.entityManager = entityManager;
+	}
+	
+	
+
+}

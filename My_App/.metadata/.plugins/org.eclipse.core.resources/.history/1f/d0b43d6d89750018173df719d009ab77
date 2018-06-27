@@ -1,0 +1,54 @@
+/**
+ * 
+ */
+package canada.montreal.MVC.entities;
+
+import java.util.UUID;
+
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.PrePersist;
+
+/**
+ * @author MENAD
+ *
+ */
+	
+	
+	@Entity(name="Entity")
+	@Inheritance(strategy=InheritanceType.JOINED)
+	@DiscriminatorColumn(name="OBJECT_TYPE", discriminatorType=DiscriminatorType.STRING, length=48)
+	public abstract class AbstractEntity {
+
+	    @Id
+	    @Column(name="oid", insertable=true, updatable=false, nullable=false, columnDefinition="CHAR(16) FOR BIT DATA")
+	    private UUID oid;
+  
+	    
+	    /**
+		 * @return the oid
+		 */
+		public UUID getOid() {
+			return oid;
+		}
+
+
+		/**
+		 * @param oid the oid to set
+		 */
+		public void setOid(UUID oid) {
+			this.oid = oid;
+		}
+
+		@PrePersist
+	    private void prePersist() {
+	        if (oid == null)
+	            oid = UUID.randomUUID();
+	    }
+
+}

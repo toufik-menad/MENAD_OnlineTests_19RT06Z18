@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package canada.montreal.MVC.dto;
+
+/**
+ * @author MENAD
+ *
+ */
+public class Employee {
+
+}

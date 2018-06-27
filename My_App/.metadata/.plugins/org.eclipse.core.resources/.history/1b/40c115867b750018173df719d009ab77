@@ -1,0 +1,38 @@
+/**
+ * 
+ */
+package canada.montreal.MVC.entities;
+
+import java.util.UUID;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import canada.montreal.MVC.dto.Department;
+
+/**
+ * @author MENAD
+ *
+ */
+@Entity(name = "Employee")
+public class EmployeeEntity {
+	
+	@Id
+	@Column(name="", nullable=false, insertable= true, length = 128, unique = true, columnDefinition = "CHAR(16) FOR BIT DATA")
+    private UUID oid;
+	
+	@Column(name="first_Name", nullable=false, insertable= true, length = 128)
+    private String firstName;
+	
+	@Column(name="last_Name", nullable=false, insertable= true, length = 128)
+	private String lastName;
+	
+	@Column(name="salary", nullable=false, insertable= true, length = 128)
+	private int salary;
+	
+	@Column(name="department", nullable=false, insertable= true, length = 128)
+	private Department department;
+	
+
+}

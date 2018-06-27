@@ -1,0 +1,89 @@
+package canada.montreal.MVC.models;
+
+import java.io.IOException;
+
+import javax.annotation.Resource;
+import javax.enterprise.inject.Model;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.transaction.UserTransaction;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import canada.montreal.dao.DepartmentDAO;
+import canada.montreal.dto.Department;
+import canada.montreal.entities.DepartmentEntity;
+import canada.montreal.entities.EmployeeEntity;
+
+
+@Model
+public class EmployeeModel {
+	
+	
+	private final Logger logger = LoggerFactory.getLogger(getClass());
+	
+    @PersistenceContext
+    private EntityManager entityManager;
+   
+    @Resource
+    private UserTransaction transaction;
+    
+    
+    @Inject DepartmentDAO dao;
+	
+	public void handle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		logger.info("ENTER handle");
+		
+		
+		final String firstName = request.getParameter("firstName");
+		logger.info("FirstName: {}", firstName);
+		
+		final String lastName = request.getParameter("lastName");
+		logger.info("lastName: {}", lastName);
+		
+		final String salaryTmp = request.getParameter("salary");
+		Integer salary = null;
+		
+		if(salaryTmp !=null) {
+		salary = Integer.parseInt(salaryTmp);
+		logger.info("salary: {}", salary);
+		
+		final String departmentName = request.getParameter("department");
+		logger.info("department: {}", departmentName);
+		
+		EmployeeEntity employee = new EmployeeEntity();
+		employee.setFirstName(firstName);
+		employee.setLastName(lastName);
+		employee.setSalary(salary);
+		
+		Department departmentDTO = dao.findDTOByName(departmentName);
+		DepartmentEntity department = new DepartmentEntity();
+		department.setOid(departmentDTO.getOid());
+		department.setName(departmentDTO.getName());
+		department.setId(departmentDTO.getId());
+		
+		employee.setDepartment(department);
+		
+		
+			try {
+				transaction.begin();
+				entityManager.persist(employee);
+				transaction.commit();
+			} catch (final Exception ex) {
+				ex.printStackTrace();
+			}
+			
+		}
+
+		logger.info("EXIT handle");
+		
+	
+	}
+
+}

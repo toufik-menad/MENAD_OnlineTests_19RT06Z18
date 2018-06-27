@@ -1,0 +1,93 @@
+package canada.montreal.MVC.models;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.Resource;
+import javax.enterprise.inject.Model;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.transaction.Status;
+import javax.transaction.UserTransaction;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import canada.montreal.dao.DepartmentDAO;
+import canada.montreal.dto.Department;
+import canada.montreal.entities.DepartmentEntity;
+
+
+@Model
+public class DepartmentModel {
+	
+	
+	private final Logger logger = LoggerFactory.getLogger(getClass());
+	private Map<String,String> inputErrors = new HashMap<>();
+	private List<Department>departments;
+    private DepartmentEntity departmentEntity;
+	
+	@PersistenceContext
+    private EntityManager entityManager;
+   
+    @Resource
+    private UserTransaction transaction;
+    
+    @Inject DepartmentDAO dao;
+    
+    
+	
+	public void handle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		logger.info("ENTER handle");
+		
+		
+		final String name = request.getParameter("name");
+		logger.info("Name: {}", name);
+		
+		final String id = request.getParameter("id");
+		logger.info("ID: {}", id);
+		
+		
+		if(id !=null) {
+
+		
+		
+			departmentEntity.setName(name);
+			departmentEntity.setId(Long.parseLong(id));
+		
+		
+			try {
+				transaction.begin();
+				entityManager.persist(departmentEntity);
+				if (transaction.getStatus() == Status.STATUS_ACTIVE) {
+                    transaction.commit();
+                }
+			} catch (final Exception ex) {
+				inputErrors.put(id, "Enter a valid id");
+			}
+			
+		}
+
+		logger.info("EXIT handle");
+		
+	
+	}
+	
+
+	/**
+	 * @return the departments
+	 */
+	public List<Department> getDepartments() {
+		departments = dao.findAllDTO();
+		return departments;
+	}
+		
+
+}

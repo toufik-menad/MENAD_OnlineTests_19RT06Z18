@@ -1,0 +1,81 @@
+/**
+ * 
+ */
+package canada.montreal.entities;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+/**
+ * @author MENAD
+ *
+ */
+@Entity(name = "Department")
+@Table(name="department")
+public class DepartmentEntity extends AbstractEntity{
+	
+		
+//    @ManyToOne(optional=false)
+//    @JoinColumn(name="employee_oid", nullable=false, updatable=false)
+//    private EmployeeEntity employee;
+	
+	@Column(name="department_Name", nullable=false, insertable= true, length = 128)
+	private String name;
+	
+    @OneToMany(mappedBy = "departmentOfEmployee", cascade = CascadeType.ALL)
+    private List<EmployeeEntity>employeesOfDepartment;
+
+	/**
+	 * @return the employee
+	 */
+//	public EmployeeEntity getEmployee() {
+//		return employee;
+//	}
+
+	/**
+	 * @param employee the employee to set
+	 */
+//	public void setEmployee(EmployeeEntity employee) {
+//		this.employee = employee;
+//	}
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * @return the employeesOfDepartment
+	 */
+	public List<EmployeeEntity> getEmployeesOfDepartment() {
+		return employeesOfDepartment;
+	}
+
+	/**
+	 * @param employeesOfDepartment the employeesOfDepartment to set
+	 */
+	public void setEmployeesOfDepartment(List<EmployeeEntity> employeesOfDepartment) {
+		this.employeesOfDepartment = employeesOfDepartment;
+	}
+	
+	
+	
+
+}

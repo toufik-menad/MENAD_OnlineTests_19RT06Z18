@@ -1,0 +1,36 @@
+/**
+ * 
+ */
+package canada.montreal.dao;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+
+/**
+ * @author MENAD
+ *
+ */
+
+@Stateless
+@LocalBean
+
+public class EmployeeDAO {
+	
+	//private final EntityManager entityManager;
+	
+	/**
+	 * @param entityManager
+	 */
+	public EmployeeDAO() {
+	}
+
+	/**
+	 * @return the entityManager
+	 */
+	public EntityManager getEntityManager() {
+		return entityManager;
+	}
+	
+
+}

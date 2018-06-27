@@ -1,0 +1,28 @@
+package canada.montreal.MVC.models;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class EmployeeModel {
+	
+	
+	private final Logger logger = LoggerFactory.getLogger(getClass());
+	
+	public void handle(HttpServletRequest request, HttpServletResponse response) {
+		
+		logger.info("ENTER handle");
+		
+		final String firstName = request.getParameter("firstName");
+		final String lastName = request.getParameter("lastName");
+		final String salary = request.getParameter("salary");
+		final String department = request.getParameter("department");
+		
+		
+		
+	
+	}
+
+}

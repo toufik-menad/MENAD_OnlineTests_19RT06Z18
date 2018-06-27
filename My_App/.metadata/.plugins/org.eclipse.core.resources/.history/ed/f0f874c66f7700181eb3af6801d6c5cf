@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package canada.montreal.dao;
+
+/**
+ * @author MENAD
+ *
+ */
+public class EmployeeDAO {
+
+}

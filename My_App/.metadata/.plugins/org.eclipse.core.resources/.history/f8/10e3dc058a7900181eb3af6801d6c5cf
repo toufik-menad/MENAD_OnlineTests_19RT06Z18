@@ -1,0 +1,113 @@
+/**
+ * 
+ */
+package canada.montreal.entities;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+
+/**
+ * @author MENAD
+ *
+ */
+
+@Entity(name = "Employee")
+@Table(name="employee")
+@NamedQueries({
+	@NamedQuery(name = EmployeeEntity.QUERY_FIND_DTO_BY_OID, query = "SELECT e FROM Employee e WHERE e.oid = :oid"),
+	@NamedQuery(name = EmployeeEntity.QUERY_DTO_FIND_ALL, query = "SELECT " + EmployeeEntity.CONSTRUCT_PARAM
+		    + " FROM Employee e"),
+})
+
+public class EmployeeEntity extends AbstractEntity{
+	
+	public static final String QUERY_FIND_DTO_BY_OID = "EmployeeEntity.findDTOByOid";
+	public static final String QUERY_DTO_FIND_ALL = "EmployeeDTO.findAllDTO";
+	
+	
+	protected static final String CONSTRUCT_PARAM = "new canada.montreal.dto.Employee( " + "   e.oid," + "   e.firstName,"
+			+" e.lastName,"      +  "   e.salary" +")";
+	
+	@Column(name="first_Name", nullable=false, insertable= true, length = 128)
+    private String firstName;
+	
+	@Column(name="last_Name", nullable=false, insertable= true, length = 128)
+	private String lastName;
+	
+	@Column(name="salary", nullable=false, insertable= true, length = 128)
+	@Min(value=10000, message="Salary Must Be Greater Than 10000")
+	private int salary;
+	
+	
+	@ManyToOne(optional = false, fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+	@JoinColumn(name = "employee_oid", nullable = false, updatable = false)
+	private DepartmentEntity department;
+
+	/**
+	 * @return the firstName
+	 */
+	public String getFirstName() {
+		return firstName;
+	}
+
+	/**
+	 * @param firstName the firstName to set
+	 */
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	/**
+	 * @return the lastName
+	 */
+	public String getLastName() {
+		return lastName;
+	}
+
+	/**
+	 * @param lastName the lastName to set
+	 */
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	/**
+	 * @return the salary
+	 */
+	public int getSalary() {
+		return salary;
+	}
+
+	/**
+	 * @param salary the salary to set
+	 */
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+	/**
+	 * @return the department
+	 */
+	public DepartmentEntity getDepartment() {
+		return department;
+	}
+
+	/**
+	 * @param department the department to set
+	 */
+	public void setDepartment(DepartmentEntity department) {
+		this.department = department;
+	}
+
+		
+
+}
