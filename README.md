@@ -3,7 +3,9 @@
 for ACQUISIO
 
 Steps to Get the App running:
+
 In the project’s folder “Acquisio-Git”
+
 1- Open CLI
 2- go to /db-derby-10.14.1.0-bin/bin/
 3- run $ ./startNetworkServer
