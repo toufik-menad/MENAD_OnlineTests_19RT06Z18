@@ -22,7 +22,6 @@ In the project’s folder “Acquisio-Git”
 
 http://localhost:8080/myapp/employees/
 ————->to get the list of employees and access them for modification.
-
 http://localhost:8080/myapp/employees/register ————-> 
 to register a new employee. 
 http://localhost:8080/myapp/departments ————->to get the list of departments.
