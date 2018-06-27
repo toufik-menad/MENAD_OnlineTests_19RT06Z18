@@ -4,6 +4,8 @@ for ACQUISIO
 
 Steps to Get the App running:
 
+Upload all the files to your local machine under the directory: “Acquisio-Git”
+
 In the project’s folder “Acquisio-Git”
 
 1- Open CLI
